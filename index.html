@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giorgos Kontoes — Electronics Engineer</title>
+  <meta name="description" content="Giorgos Kontoes — Electronics Engineer. Portfolio of PCB, IC and system design projects." />
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b5fff;
+      --glass: rgba(255,255,255,0.6);
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1220; --card:#071022; --muted:#94a3b8; --accent:#58a6ff; --glass: rgba(255,255,255,0.03); color-scheme: dark }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#e9eefc 100%);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1000px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7cc0ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+    h1{margin:0;font-size:22px}
+    .title-sub{color:var(--muted);margin-top:6px;font-size:14px}
+    .tagline{margin-top:12px;font-style:italic;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:28px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,20,40,0.06)}
+    .about p{margin:0;color:var(--muted);line-height:1.5}
+
+    .skills ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+    .skills li{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+    @media (max-width:640px){.projects-grid{grid-template-columns:1fr}}
+    .proj{display:flex;flex-direction:column;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.04)}
+    .proj .hero{height:140px;background:linear-gradient(135deg,#eef2ff,#f8fafc);display:flex;align-items:center;justify-content:center;font-weight:600;color:#0b2554}
+    @media (prefers-color-scheme:dark){.proj .hero{background:linear-gradient(135deg,rgba(88,166,255,0.12),rgba(12,18,32,0.12));color:#cfe6ff}}
+    .proj .body{padding:12px}
+    .proj h3{margin:0;font-size:15px}
+    .proj p{margin:8px 0 12px 0;color:var(--muted);font-size:13px}
+    .proj .links{display:flex;gap:8px}
+    .btn{padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--muted)}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small helper */
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">GK</div>
+      <div>
+        <h1>Giorgos Kontoes <span class="muted">— Electronics Engineer</span></h1>
+        <div class="title-sub">A nerd working on nerdy things</div>
+        <div class="tagline">Electronics engineer with experience in PCB and IC design. Interested in the whole stack from analog to digital, and from RF to power electronics.</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card about">
+          <h2 style="margin-top:0">About</h2>
+          <p>Electronics engineer with experience in PCB and IC design. Interested in the whole stack from analog to digital, and from RF to power electronics.</p>
+        </section>
+
+        <section class="card" style="margin-top:16px">
+          <h2 style="margin-top:0">Featured Projects</h2>
+          <div class="projects-grid">
+
+            <article class="proj">
+              <div class="hero">Drone detection system PSU</div>
+              <div class="body">
+                <h3>Drone detection system PSU</h3>
+                <p>Power supply unit and sensing used to provide all power rails for a high frequency generator and signal processing unit.</p>
+                <div class="links">
+                  <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Repo / Details</a>
+                  <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Images</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj">
+              <div class="hero">On-chip Mechanical Stress Sensor</div>
+              <div class="body">
+                <h3>On-chip Mechanical Stress Sensor (Thesis)</h3>
+                <p>Design of the front-end and readout ADC for an on-chip resistor-based mechanical stress sensor used for frequency-reference calibration.</p>
+                <div class="links">
+                  <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Repo / Thesis</a>
+                  <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Paper / Files</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj">
+              <div class="hero">Drone Controller</div>
+              <div class="body">
+                <h3>Drone Controller</h3>
+                <p>Embedded controller firmware and supporting power/analog electronics for drone control and telemetry.</p>
+                <div class="links">
+                  <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Repo / Details</a>
+                  <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">PCB photos</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:16px">
+          <h2 style="margin-top:0">Contact</h2>
+          <p class="muted">Interested in collaborating or hiring? Reach out:</p>
+          <p style="margin:8px 0"><strong>Email:</strong> <a href="mailto:giorgos@example.com">giorgos@example.com</a></p>
+          <p style="margin:8px 0"><strong>GitHub:</strong> <a href="https://github.com/giorgoskontoes" target="_blank">github.com/giorgoskontoes</a></p>
+          <p style="margin:8px 0"><strong>LinkedIn:</strong> <a href="#">(add your LinkedIn URL)</a></p>
+        </section>
+
+      </main>
+
+      <aside>
+        <section class="card skills">
+          <h3 style="margin-top:0">Skills & Tools</h3>
+          <ul>
+            <li>Altium Designer</li>
+            <li>LTSpice</li>
+            <li>Python</li>
+            <li>Open-source EDA (KiCad)</li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:16px">
+          <h3 style="margin-top:0">Quick Actions</h3>
+          <p style="margin:8px 0">Useful quick edits after deploy:</p>
+          <ul style="margin:0 0 0 18px;color:var(--muted)">
+            <li>Replace project "Repo / Details" links with your repo URLs.</li>
+            <li>Upload project images and replace the hero placeholders with &lt;img&gt; tags.</li>
+            <li>Update email and LinkedIn link.</li>
+          </ul>
+        </section>
+
+      </aside>
+    </div>
+
+    <footer>
+      Built with ❤️ — deploy this file as <code>index.html</code> to <strong>giorgoskontoes.github.io</strong>
+    </footer>
+  </div>
+</body>
+</html>
